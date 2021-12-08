@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+	/* Отключаем выделение */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+body {
+    background-color: #704C99;
+    overscroll-behavior-y: none;
+}
+
+#screen{
+
+}
+
+#gridwrapper{
+    display: grid;
+    align-content: center;
+    margin-bottom: 13px;
+    margin-top: 13px;
+}
+
+#grid {
+    display: grid;
+    opacity: 0;
+    /*border: 1px solid #9C61BC;*/
+    justify-content: center;
+   
+    margin: 0 auto 0 auto;
+    background-color: #40B0EF;
+    background-image: url(../img/backgroundImage1.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#grid>div {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #704C99;
+    border: 0.5px solid #9C61BC;
+    /* Rectangle */
+}
+
+.game-card {
+    width: 100%;
+    height: 100%;
+
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    
+    -webkit-transform-style: -webkit-preserve-3d;
+    transform-style: preserve-3d;
+    
+    -webkit-transition: -webkit-transform .8s;
+    transition: transform .8s;
+
+    cursor: pointer;
+}
+
+ 
+.back-card{
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 5%;
+    bottom: 5%;
+
+    background: #F4BBD5;
+    border-radius: 12%;
+}
+
+
+.back-card-question{
+    padding: 25% 32%;
+    width: 100%;
+    height: 100%;
+}
+
+.back-card-question>svg{
+    margin: 0 auto;
+}
+
+.front-card,
+.back-card{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.front-card {
+
+
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 5%;
+    bottom: 5%;
+
+    padding: 5%;
+
+    background: #FFF;
+    border-radius: 12%;
+
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.flip {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.hidden>.front-card{
+    /*visibility: hidden;*/
+    -webkit-transition: opacity .5s ease-in-out, width .5s ease-in-out;
+    transition: opacity .5s ease-in-out, width .5s ease-in-out;
+
+    width: 120%;
+    opacity: 0;
+}
+
+.hidden>.back-card{
+    /*visibility: hidden;*/
+}
+
+.hidden{
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+
+    opacity: 0;
+}
+
+.hidden>.game-card{
+    cursor: default;
+}
+
+@font-face {
+    font-family: 'RubikBold';
+    src: url('fonts/Rubik-Bold.ttf');
+}
+@font-face {
+    font-family: 'RubikBlack';
+    src: url('fonts/Rubik-Black.ttf');
+}
+@font-face {
+    font-family: 'RubikRegular';
+    src: url('fonts/Rubik-Regular.ttf');
+}
+@font-face {
+    font-family: 'RubikMedium';
+    src: url('fonts/Rubik-Medium.ttf');
+}
+@font-face {
+    font-family: 'RubikLight';
+    src: url('fonts/Rubik-Light.ttf');
+}
+
+.start_game{
+
+    height: 100vh;
+}
+
+.button-start {
+    display: inline-block;
+    /* Rectangle */
+    width: 100%;
+    /*margin: 40px 0 20px 0;*/
+    height: 70px;
+    margin-bottom: 8px;
+    background: #4634bc;
+    border-radius: 6px;
+    font-family: 'RubikRegular', serif;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF !important;
+    ;
+    border: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none !important;
+    cursor: default;
+}
+
+.button-start:active {
+    transform: translateY(5px)
+}
+
+.container.start{
+    max-width: 600px;
+
+}
+
+.container.start>.d-flex{
+    height: 100%;
+    margin: 0!important;
+   /* background-color: #261734;*/
+}
+
+.gameinfo{
+    /*background-image: url(../img/background/background.svg);*/
+    background-size: cover;
+    height: 100%;
+}
+
+.gamenumber2{
+    font-family: 'RubikBlack', serif;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 0!important; 
+    /* or 119% */
+
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.secretsofgalaxy{
+    width: 90%;
+    height: 100px;
+    border-radius: 6px;
+    color:#fff;
+
+    font-family: 'RubikBlack', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    /*line-height: 35px;*/
+    text-transform: uppercase;
+
+    border: 3px solid #FF6B95;
+    border-radius: 10px;
+    /*background: #5E378C;*/
+    /*background-image: url(../img/backgroundsecretsbtn.svg);*/
+    margin: auto auto;
+
+    /* Космические рейнджеры */
+    color: #FFFFFF;
+
+    /* Космические рейнджеры */
+
+}
+
+
+
+.helponstart{
+    /* Найди и открой все парные карточки, чтобы узнать как выглядят наши братья с других планет */
+    font-family: 'RubikRegular', serif;
+    font-size: 14px;
+    line-height: 150%;
+    /* or 150% */
+    text-align: center;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.startcardimgs>img{
+    margin: 0 5px;
+
+}
+
+.default_margin {
+    margin: 0;
+}
+
+.menu_spaceShip {
+    max-height: 93px;
+    min-height: 47px;
+}
+
+#menu_spaceShip {
+    max-height: 93px;
+    max-width: 82px;
+}
+
+#menu_laser {
+    max-height: 63px;
+    max-width: 22px;
+}
+
+#start_gameAsteroid{
+    background: url(../img/background/background.svg) no-repeat;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    height: 100vh; /* фолбэк для браузеров, которые не поддерживают пользовательские свойства */
+    height: calc(var(--vh, 1vh) * 100);
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+

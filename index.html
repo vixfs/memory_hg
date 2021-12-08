@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylegame.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal-load.css">
+    <title>Брейнсканер</title>
+
+    <script src="js/generate.js"></script>
+</head>
+<body>
+
+<section class="progress_line">
+</section>
+<section id="screen">
+</section>
+
+<div class = "modal-load">
+	<div class="modal_content">
+		<div class = "modal_head text-center">Вот такие вот секреты</div>
+		<div class = "modal_icon text-center">
+			<img class = "brainIcon" src = "img/brainScanner_icon.svg">
+		</div>
+		<div class = "modal_text">
+			А мы почти закончили! Осталось <br>пострелять по астероидам.
+		</div>
+		<div class = "modal_button">
+			<button type="button" class="btn button_modal" OnClick="generateNextMenu();">К следующей игре</button>
+		</div>
+	</div>
+</div>
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<script src="js/modal-load.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+  		$(window).resize(function(){
+    		modalResize();
+  		});
+
+	});
+
+	function showModal(){
+		$(".modal-load").css('display', "flex");
+    	modalResize();
+	}
+
+	function generateNextMenu(){
+		$(".modal-load").css('display', "none");
+		$('.progress_line').html(null);
+    	chooseLevelScreen();
+	}
+</script>
+
+<script src="js/qs.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/allCards.js"></script>
+<script src="js/allBackgrounds.js"></script>
+<script src="js/script.js"></script>
+<script src="js/menu.js"></script>
+
+<script src="js/progress_line.js"></script>
+<script src="js/example_game.js"></script>
+<script src="js/menuHeight.js"></script>
+
+</body>
+</html>

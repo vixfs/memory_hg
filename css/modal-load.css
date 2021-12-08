@@ -1,0 +1,95 @@
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal-load {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 0, 0, 0, .7 ) 
+                50% 50% 
+                no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading .modal-load {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal-load {
+    display: block;
+}
+
+.modal_content {
+  background-color: #ed2274;
+  height: 41%;
+  border-radius: 10px;
+}
+
+.modal_head{
+  color: #fff;
+  font-family: 'RubikBlack', serif;
+  height: 20%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-transform: uppercase;
+
+}
+
+.modal_icon {
+  height: 30%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.modal_icon img{
+  height: 100%;
+}
+
+.modal_text, .modal_button {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_text{
+  height: 20%;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.modal_button {
+  height: 30%;
+}
+
+.button_modal {
+  background: #FFFFFF;
+  color: #4632ab;
+  height: 65%;
+  width: 65%;
+}
+
+.button_modal:hover {
+  background: #FFFFFF;
+  color: #4632ab;
+}
